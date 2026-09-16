@@ -1,0 +1,7 @@
+# Browser Validation Notes
+
+The production static export loaded successfully at `http://127.0.0.1:4173/` with the expected DeskForge title, fixed header, hero, workload selector, search/filter controls, 18-card catalog, table columns, Amazon buttons for retail products, manufacturer specification links, buyer guidance, disclosure link, and privacy link. The desktop viewport rendered without an obvious layout break. Data-center B200 and H200 entries correctly omit Amazon buttons and identify server-only form factors. The initial browser input attempt did not visibly update the controlled search field, so filter behavior requires one additional interaction check or a deterministic client test.
+
+The second cloud-browser attempt focused and entered the search field but again left the React-controlled value unchanged. The static page itself remained stable. Because the browser automation input did not dispatch the expected React change event, deterministic Chromium automation will be used to validate client filtering and mobile rendering.
+
+Deterministic Chromium validation passed. The initial catalog displayed 18 of 18 GPUs, the `Blackwell` search reduced the catalog to 10 of 18, all policy and crawler routes returned successful responses, the mobile document had no horizontal overflow, and the browser console produced no errors. Full-page screenshots confirmed a coherent dark technical design, readable desktop table, responsive mobile card layout, visible affiliate controls, guidance sections, methodology, and footer disclosures.

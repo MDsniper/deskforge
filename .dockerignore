@@ -1,7 +1,10 @@
 .git
-.gitignore
-.dockerignore
-README.md
-Dockerfile
-docker-compose.yml
-*.log
+.github
+.next
+out
+node_modules
+npm-debug.log*
+.env
+.env.*
+!.env.example
+local-ai-gpu-site.zip

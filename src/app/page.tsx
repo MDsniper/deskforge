@@ -9,17 +9,12 @@ export default function Home() {
     <>
       <div id="top" />
       <SiteHeader />
-      <main className="flex-1">
+      <main>
         <Hero />
-        <section
-          id="compare"
-          className="mx-auto max-w-6xl scroll-mt-20 px-4 py-14 sm:px-6 md:py-20"
-        >
-          <GpuComparisonTable />
+        <section id="compare" className="scroll-mt-24 border-b border-white/8 bg-[#090d14] py-20 sm:py-24">
+          <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-10"><GpuComparisonTable /></div>
         </section>
-        <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 md:pb-28">
-          <GuidanceSections />
-        </section>
+        <section className="bg-[#0a0f17] py-20 sm:py-28"><div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><GuidanceSections /></div></section>
       </main>
       <SiteFooter />
     </>
