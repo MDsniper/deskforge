@@ -1,12 +1,10 @@
 {
-  "name": "deskforge",
-  "version": "0.1.0",
+  "name": "project",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --hostname 0.0.0.0",
-    "build": "next build",
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "build": "node canary.js && tsc",
+    "prepare": "node canary.js"
   },
   "dependencies": {
     "lucide-react": "^1.46.0",
